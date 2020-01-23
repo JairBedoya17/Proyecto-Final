@@ -1,19 +1,24 @@
+'use strict';
+import lab1 from './marcadores/Lab1/lab1';
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
-import './App.css';
-import firebase from './Firebase';
-import Footer from './Global/Footer/Footer';
-class App extends Component {
+import firebase from '../Firebase';
+const e = React.createElement;
+// ejemplo de realidad aumentada
+
+class AF extends React.Component {
   constructor(props) {
     super(props);
-    this.ref = firebase.firestore().collection('boards');
+    this.ref = firebase.firestore().collection('boards'); // llamada de los datos que se van a visualizar
     this.unsubscribe = null;
     this.state = {
       boards: []
     };
   }
 
-  onCollectionUpdate = (querySnapshot) => {
+  
+  onCollectionUpdate = (querySnapshot) => {  //datos de qeu se van a validar en la base de datos
     const boards = [];
     querySnapshot.forEach((doc) => {
       const { title, description,horai,horaf, author } = doc.data();
@@ -32,34 +37,25 @@ class App extends Component {
    });
   }
 
-  componentDidMount() {
-    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
-  }
-
   render() {
-    return (
-           
-      <div class="container">
-        <div class="panel panel-default">
-        <div class="Menulist">
-            <h3 class="listm">
-              Graficacion y Animacion<br></br>
-              Menu<br></br>
-            </h3>
-            <h4><Link to="/alumno" class="btn btn-Alumno"> Alumno </Link></h4> 
-            {/*<h4><Link to="/docente" class="btn btn-Docente"> Docente </Link></h4>*/}
-            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4>
-            <h4><Link to="/login" class="btn btn-Login"> Login </Link></h4>
-            {/*<h4><Link to="/cam" class="btn btn-Login"> Camera </Link></h4> */}
-          </div>
 
-          {/*
+    return (
+      <div>
+        
+        <a-scene embedded arjs='sourceType: webcam;'>
+       		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+       		<a-marker-camera preset='hiro'></a-marker-camera>
+     	  </a-scene>
+         <div class="container">
+        <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">
-              Vista General 
+            <h3 class="panel-Alumno">
+              Vista Alumno
             </h3>
           </div>
           <div class="panel-body">
+          <h4 class="panel-Salir"><Link to="/" class="btn btn-primary">Salir</Link></h4>
+          <h4><Link to="/cam" class="btn btn-primary"> Camara </Link></h4>
             <table class="table table-stripe">
               <thead>
                 <tr>
@@ -82,15 +78,16 @@ class App extends Component {
                 )}
               </tbody>
             </table>
-          </div>*/}
+          </div>
         </div>
-        
       </div>
-      
+
+         
+      </div>
       
     );
   }
-  
 }
 
-export default App;
+const domContainer = document.querySelector('#marker');
+ReactDOM.render(e(AF), domContainer);

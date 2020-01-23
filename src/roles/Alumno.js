@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import firebase from '../Firebase';
 import { Link } from 'react-router-dom';
-import './App.css';
-import firebase from './Firebase';
-import Footer from './Global/Footer/Footer';
+import '../roles/VistaRoles.css';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,7 +17,7 @@ class App extends Component {
   onCollectionUpdate = (querySnapshot) => {
     const boards = [];
     querySnapshot.forEach((doc) => {
-      const { title, description,horai,horaf, author } = doc.data();
+      const { title, description, horai, horaf, author } = doc.data();
       boards.push({
         key: doc.id,
         doc, // DocumentSnapshot
@@ -29,7 +30,7 @@ class App extends Component {
     });
     this.setState({
       boards
-   });
+    });
   }
 
   componentDidMount() {
@@ -38,28 +39,18 @@ class App extends Component {
 
   render() {
     return (
-           
+
       <div class="container">
         <div class="panel panel-default">
-        <div class="Menulist">
-            <h3 class="listm">
-              Graficacion y Animacion<br></br>
-              Menu<br></br>
-            </h3>
-            <h4><Link to="/alumno" class="btn btn-Alumno"> Alumno </Link></h4> 
-            {/*<h4><Link to="/docente" class="btn btn-Docente"> Docente </Link></h4>*/}
-            <h4><Link to="/admin" class="btn btn-Admin"> Administrador </Link></h4>
-            <h4><Link to="/login" class="btn btn-Login"> Login </Link></h4>
-            {/*<h4><Link to="/cam" class="btn btn-Login"> Camera </Link></h4> */}
-          </div>
-
-          {/*
           <div class="panel-heading">
-            <h3 class="panel-title">
-              Vista General 
+            <h3 class="panel-Alumno">
+              Vista Alumno
             </h3>
           </div>
           <div class="panel-body">
+            {/*<h4 class="panel-Salir"><Link to="/" class="btn btn-primary">Principal</Link></h4>
+            <h4><Link to="/cam" class="btn btn-primary"> Camara </Link></h4>*/}
+
             <table class="table table-stripe">
               <thead>
                 <tr>
@@ -70,6 +61,7 @@ class App extends Component {
                   <th>Nombre Profesor</th>
                 </tr>
               </thead>
+              
               <tbody>
                 {this.state.boards.map(board =>
                   <tr>
@@ -81,16 +73,13 @@ class App extends Component {
                   </tr>
                 )}
               </tbody>
+            
             </table>
-          </div>*/}
+          </div>
         </div>
-        
       </div>
-      
-      
     );
   }
-  
 }
 
 export default App;

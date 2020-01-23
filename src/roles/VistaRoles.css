@@ -1,0 +1,27 @@
+.panel-heading{
+    text-align: center;
+    background-color: aqua;
+}
+
+
+div.menu { 
+    background-color: #537fdd;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: left
+  }
+
+  .panel-Salir{
+    text-align: right; 
+  }
+
+  .mod-lab{
+    background-color: #537fdd;
+    text-align: center;
+    
+  }
