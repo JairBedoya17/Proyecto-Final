@@ -1,55 +1,30 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "bootstrap": "^4.3.1",
-    "firebase": "^6.3.4",
-    "react": "^16.8.6",
-    "react-aframe-ar": "^1.18.0",
-    "react-dom": "^16.9.0",
-    "react-quill": "^1.3.3",
-    "react-render-html": "^0.6.0",
-    "react-router": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^3.3.0",
-    "react-social-icons": "^4.1.0",
-    "react-web-ar": "^1.0.0-beta2",
-    "reactstrap": "^8.0.1",
-    "sweetalert2": "^8.15.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "name": "nodejs-notes-app",
+  "version": "2.0.0",
+  "description": "Notes App",
   "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Garciaa94/proyectoGA.git"
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Garciaa94/proyectoGA/issues"
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "express-session": "^1.17.0",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.9",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   },
-  "homepage": "https://github.com/Garciaa94/proyectoGA#readme"
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.2",
+    "nodemon": "^2.0.2",
+    "npm-check-updates": "^4.0.1"
+  }
 }
