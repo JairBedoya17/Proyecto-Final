@@ -1,0 +1,15 @@
+@import "../scss/index.scss";
+
+.layout-error404 {
+  transition: margin-left 0.2s;
+
+  &__content {
+    min-height: calc(100vh - 65px);
+    padding: 90px 25px 25px 25px;
+    background-image: url("../assets/img/jpg/error-404-not-found.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    //background-attachment: fixed;
+    background-size: cover;
+  }
+}
