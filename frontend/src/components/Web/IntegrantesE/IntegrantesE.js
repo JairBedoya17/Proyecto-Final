@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Col, Card, Button } from "antd";
 import { Link } from "react-router-dom";
-import Aaron from "../../../assets/img/jpg/aaron.jpg";
+//import Aaron from "../../../assets/img/jpg/aaron.jpg";
 import Jair from "../../../assets/img/jpg/Jair.jpg";
 import Jhonny from "../../../assets/img/jpg/Jhonny.jpg";
 import Kristy from "../../../assets/img/jpg/Kristy.jpeg";
@@ -19,7 +19,7 @@ export default function IntegrantesE() {
         <Row className="row-courses">
           <Col md={6}>
             <CardCourse
-              image={Aaron}
+              //image={Aaron}
               title="Aaron Jaramillo"
               subtitle="Estudiante de la Carrera de Sistemas"
               link="https://aaronjaramillo.me/"
