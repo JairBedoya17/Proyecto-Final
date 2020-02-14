@@ -13,9 +13,6 @@ export default function NavigationFooter() {
       <Col md={12}>
         <RenderListLeft />
       </Col>
-      <Col md={12}>
-        <RenderListRight />
-      </Col>
     </Row>
   );
 }
@@ -24,50 +21,8 @@ function RenderListLeft() {
   return (
     <ul>
       <li>
-        <a href="#">
-          <Icon type="book" /> Cursos Online
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="code" /> Desarrollo Web
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="database" /> Base de Datos
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="right" /> Politica de Privacidad
-        </a>
-      </li>
-    </ul>
-  );
-}
-
-function RenderListRight() {
-  return (
-    <ul>
-      <li>
-        <a href="#">
-          <Icon type="hdd" /> Sistemas / Servidores
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="appstore" /> CMS
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="user" /> Porfolio
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <Icon type="right" /> Política de Cookies
+        <a href="http://localhost:3000/admin/login">
+          <Icon type="user" spin /> Iniciar sesión
         </a>
       </li>
     </ul>

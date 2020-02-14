@@ -26,10 +26,10 @@ export default function SignIn() {
           <Tabs type="card">
             <TabPane tab={<span>Iniciar sesión</span>} key="1">
               <LoginForm />
-            </TabPane>{/*
+            </TabPane>
             <TabPane tab={<span>Nuevo usuario</span>} key="2">
               <RegisterForm />
-            </TabPane>*/}
+            </TabPane>
           </Tabs>
         </div>
       </Content>

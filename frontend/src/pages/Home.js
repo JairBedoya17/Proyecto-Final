@@ -1,9 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import MainBanner from "../components/Web/MainBanner";
-import HomeCourses from "../components/Web/HomeCourses";
-import HowMyCoursesWork from "../components/Web/HowMyCoursesWork";
-import ReviewsCourses from "../components/Web/ReviewsCourses";
+import IntegrantesE from "../components/Web/IntegrantesE";
 
 export default function Home() {
   return (
@@ -16,10 +14,7 @@ export default function Home() {
           data-react-helmet="true"
         />
       </Helmet>
-      <MainBanner />
-      <HomeCourses />
-      <HowMyCoursesWork />
-      <ReviewsCourses />
+      <IntegrantesE />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Icon } from "antd";
-import AgusLogo from "../../../assets/img/png/logo-white.png";
+import PuceLogo from "../../../assets/img/png/logo-white.png";
 import { logout } from "../../../api/auth";
 
 import "./MenuTop.scss";
@@ -18,7 +18,7 @@ export default function MenuTop(props) {
       <div className="menu-top__left">
         <img
           className="menu-top__left-logo"
-          src={AgusLogo}
+          src={PuceLogo}
           alt="LAB PUCE"
         />
         <Button type="link" onClick={() => setMenuCollapsed(!menuCollapsed)}>

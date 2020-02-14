@@ -34,7 +34,7 @@ export default function EditUserForm(props) {
       });
     } else if (userData.password !== userData.repeatPassword) {
       notification["error"]({
-        message: "Las contraseñas tienen que ser iguale."
+        message: "Las contraseñas tienen que ser iguales."
       });
     } else {
       const accesToken = getAccessTokenApi();
